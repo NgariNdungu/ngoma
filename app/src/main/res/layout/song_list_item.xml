@@ -35,6 +35,16 @@
         style="@style/ArtistStyle"
         />
 
+    <TextView
+        android:id="@+id/album_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/song_artist"
+        app:layout_constraintLeft_toRightOf="@id/song_artist"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="Album"
+        style="@style/ArtistStyle"/>
+
     <ImageView
         android:id="@+id/play_button_image"
         android:layout_width="wrap_content"
