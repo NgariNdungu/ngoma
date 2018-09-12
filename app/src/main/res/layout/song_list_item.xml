@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/placeholder_art"
+        app:layout_constraintLeft_toLeftOf="parent"
         style="@style/AlbumArtStyle"/>
 
     <TextView
@@ -26,32 +27,27 @@
 
     <TextView
         android:id="@+id/song_artist"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toRightOf="@id/album_art"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/song_title"
         app:layout_constraintBottom_toBottomOf="@id/album_art"
+        app:layout_constraintHorizontal_bias="0"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
         tools:text="Artist"
         style="@style/ArtistStyle"
         />
-
-    <TextView
-        android:id="@+id/album_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/song_artist"
-        app:layout_constraintLeft_toRightOf="@id/song_artist"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:text="Album"
-        style="@style/ArtistStyle"/>
 
     <ImageView
         android:id="@+id/play_button_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/album_art"
-        app:layout_constraintBottom_toBottomOf="@id/album_art"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:src="@drawable/play"/>
 
 </android.support.constraint.ConstraintLayout>

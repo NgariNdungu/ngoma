@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class SongAdapter extends ArrayAdapter<Song> {
 
+    public static final String DIVIDER = "|";
     public SongAdapter(Context context, ArrayList<Song> songs) {
         super(context, 0, songs);
     }
@@ -25,13 +26,14 @@ public class SongAdapter extends ArrayAdapter<Song> {
         }
         TextView songTitle = (TextView) convertView.findViewById(R.id.song_title);
         TextView artist = (TextView) convertView.findViewById(R.id.song_artist);
-        TextView album = (TextView) convertView.findViewById(R.id.album_title);
 
         // song in current position
         Song currentSong = getItem(position);
         songTitle.setText(currentSong.getSongTitle());
-        artist.setText(currentSong.getArtist());
-        album.setText(currentSong.getAlbum());
+        artist.setText(String.format("%s %s %s",currentSong.getArtist(), DIVIDER,
+                currentSong.getAlbum()));
+        // set selected state to enable marquee
+        artist.setSelected(true);
 
         return convertView;
     }
