@@ -6,6 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+        <item name="android:textColorSecondary">@color/secondaryTextColor</item>
+        <item name="android:colorBackground">@color/secondaryDarkColor</item>
+        <item name="android:colorButtonNormal">@color/colorPrimaryDark</item>
     </style>
 
     <style name="BaseTextStyle" parent="AppTheme">
@@ -17,18 +21,23 @@
 
     <style name="TitleStyle" parent="BaseTextStyle">
         <item name="android:textStyle">bold</item>
-        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
     </style>
 
     <style name="ArtistStyle" parent="BaseTextStyle">
         <item name="android:fontFamily">monospace</item>
-        <item name="paddingEnd">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
     <style name="AlbumArtStyle" parent="AppTheme">
-        <item name="android:background">@android:color/darker_gray</item>
         <item name="android:minHeight">96dp</item>
         <item name="android:minWidth">96dp</item>
+    </style>
+
+    <style name="LabelStyle" parent="TitleStyle">
+        <item name="android:textSize">16sp</item>
     </style>
 
 </resources>
