@@ -7,4 +7,5 @@
     <string name="song">Song:</string>
     <string name="album">Album:</string>
     <string name="artist">Artist:</string>
+    <string name="song_list">Song List</string>
 </resources>

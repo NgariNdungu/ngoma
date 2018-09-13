@@ -21,7 +21,8 @@
         </activity>
         <activity
             android:name=".CurrentSong"
-            android:label="@string/playing" />
+            android:label="@string/playing"
+            android:parentActivityName=".MainActivity"/>
 
     </application>
 

@@ -1,7 +1,10 @@
 package ke.co.openmaps.createchs.ngoma;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class CurrentSong extends AppCompatActivity {
@@ -23,6 +26,15 @@ public class CurrentSong extends AppCompatActivity {
         song.setText(songDetails[0]);
         artist.setText(songDetails[1]);
         album.setText(songDetails[2]);
+
+        final Intent mainActivityIntent = new Intent(this, MainActivity.class);
+        Button songListButton = (Button) findViewById(R.id.song_list);
+        songListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(mainActivityIntent);
+            }
+        });
 
     }
 }
